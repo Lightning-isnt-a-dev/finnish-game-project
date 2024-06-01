@@ -1,5 +1,4 @@
 import os, pygame, sys, time, random, pickle
-import test
 
 def cls():
   input("\nPaina enter jatkaaksesi.")
