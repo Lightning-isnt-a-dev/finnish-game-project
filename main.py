@@ -1,5 +1,7 @@
 import os, pygame, sys, time, random, pickle
 
+
+# clear console
 def cls():
   input("\nPaina enter jatkaaksesi.")
   os.system('cls' if os.name == 'nt' else 'clear')
@@ -481,13 +483,17 @@ def hirsipuu():
   else:
     sanat = ["tietotekniikka", "python", "reppu", "replit", "pöytä", "haastava sana", "tietokone", "kamera", "kirjasto", "puhelin", "youtube", "koulu", "wordle", "koulu ei ole hauska"]
 
-  elämät = 10
+  elämät = 6
 
   #valitaan sana
   ValittuSana = random.choice(sanat)
   Sana = []
 
-  #kertoo monta sanoja on sanassa
+  #jos on enemmän kuin 1 sana niin saat enemmän elämää
+  if " " in ValittuSana:
+    elämät = 9
+  
+  #kertoo monta kirjaimia on sanassa
   for _ in range(0, len(ValittuSana)):
     Sana.append("_")
 
